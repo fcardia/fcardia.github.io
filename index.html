@@ -3,9 +3,148 @@
 <html>
     <head>
         <title>Francesco Cardia</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <meta name="author" content="Francesco Cardia">
+        <meta name="description" content="Francesco Cardia's personal website">
+        <meta name="keywords" content="experience, career, blog, data science">
+
     </head>
 
     <body>
-        <p>Sito web di Francesco Cardia, clicca <a href="/blog.html">qui</a>per accedere al blog.</p>
+
+        <!-- Sidebar -->
+        <aside class="sidebar"></aside>
+
+        <main class="content">
+            <!-- About Me -->
+            <section id="about-me">
+                <h2>About Me</h2>
+
+            </section>
+            <hr>
+            <p>I'm a passionate computer science student with high interest in Data Science and Machine Learning. <br>
+                I recently concluded my Bachelor's Degree in Applied Computer Science and Data Analytics at the University of Cagliari.
+                Currently I'm starting my Master's Degree in Applied Artificial Intelligence and in parallel I got selected for a Research Fellowship in my department.<br>
+                I will always work to convert my passion into something useful for people and to create a better tomorrow.
+            </p>
+
+            <!-- Work Experience -->
+            <section id="work-experience">
+                <h2>Work Experience</h2>
+                <hr>
+                <div class="career-step">
+                    <a href="https://www.unica.it" target="_blank"><img src="img/unica.png" alt="UniCa Logo" class="career-logo"></a>
+                    <div class="career-card">
+                        <h3>Research Intern</h3>
+                        <h4>Università degli Studi di Cagliari</h4>
+                        <h5>Oct 2024 - Feb 2025</h5>
+                        <ul class="activities">
+                            <li>Contributed to LLM-based simulation of learner behavior via role-playing techniques, including data collection, performance evaluation, and system design.</li>
+                            <li>Led development of a multi-agent LLM-powered learning environment to enhance student engagement and learning outcomes.</li>
+                            <li>Designed pipelines for context-aware retrieval and optimization of raw educational materials for LLM agents.</li>
+                            <li>Conducted quality assessments with both agentic simulations and real students to validate learning support effectiveness.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section id="education">
+                <h2>Education</h2>
+                <hr>
+                <div class="career-step">
+                    <a href="https://www.unica.it" target="_blank"><img src="img/unica.png" alt="UniCa Logo" class="career-logo"></a>
+                    <div class="career-card">
+                        <h3>MSc in Applied Artificial Intelligence</h3>
+                        <h4>Università degli Studi di Cagliari</h4>
+                        <h5>Sep 2025 - Present</h5>
+                    </div>
+                </div>
+                <div class="career-step">
+                    <a href="https://www.unica.it" target="_blank"><img src="img/unica.png" alt="UniCa Logo" class="career-logo"></a>
+                    <div class="career-card">
+                        <h3>BSc in Applied Computer Science and Data Analytics</h3>
+                        <h4>Università degli Studi di Cagliari</h4>
+                        <h5>Sep 2022 - Jul 2025</h5>
+                        <ul class="activities">
+                            <li>GPA: 29.73/30</li>
+                            <li>First graduate of the academic year of the course.</li>
+                            <li>Co-authored a paper accepted at a peer-reviewed conference.</li>
+                            <li>Core subjects: Machine Learning, Deep Learning, Big Data, Computational Statistics, Data Structures & Algorithms.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="career-step">
+                    <a href="https://www.pacinotti.edu.it/" target="_blank"><img src="img/pacinotti.png" alt="Pacinotti Logo" class="career-logo"></a>
+                    <div class="career-card">
+                        <h3>High Scool Diploma</h3>
+                        <h4>Liceo Scientifico A. Pacinotti</h4>
+                        <h5>Sep 2017 - Jun 2022</h5>
+                        <ul class="activities">
+                            <li>Final grade: 100/100</li>
+                            <li>Won a Latin Language translation contest</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <hr>
+                <div class="scroll-elements">
+                    <div class="project">
+                        <a href="https://github.com/tail-unica/maestro" target="_blank">
+                            <img src="img/maestro.png" alt="Maestro pic" id="maestro-pic">
+                        </a>
+                        <h3>Multi-Agent Environment for Student Support</h3>
+                    </div>
+                    <div class="project">
+                        <img src="img/ml_project.png" alt="Maestro pic">
+                        <h3>Bank Default Prediction with Machine Learning models</h3>
+                    </div>
+                    <div class="project">
+                        <img src="img/dl_project.png" alt="Maestro pic">
+                        <h3>Hospital admission time prediction with KAN-based models</h3>
+                    </div>
+                    <div class="project">
+                        <img src="img/fpw_project.png" alt="Maestro pic">
+                        <h3>VS Chess: a web interface for chess tournaments</h3>
+                    </div>
+                    <div class="project">
+                        <img src="img/ias_project.png" alt="Maestro pic">
+                        <h3>EEG-based emotion recognition with Convolutional Neural Networks</h3>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="publications">
+                <h2>Publications</h2>
+                <hr>
+                <ul>
+                    <li><a href="" id="paper"><b>F. Cardia</b>, V. Pentangelo, S. Lambiase, C. Gravino, F. Palomba, M. Marras. "Toward Realistic AI-Generated Student Questions to Support Instructor Training" Accepted for publication at the European Conference on Technology Enhanced Learning (ECTEL 2025), Newcastle, UK.</a></li>
+                </ul>   
+            </section>
+
+            <!-- Interests -->
+            <section id="interests">
+                <h2>Interests</h2>
+                <hr>
+                <div class="scroll-elements">
+                    <div class="project">
+                        <img src="img/finance.png" alt="Maestro pic">
+                        <h3>Personal Finance</h3>
+                    </div>
+                    <div class="project">
+                        <img src="img/reading.png" alt="Maestro pic">
+                        <h3>Reading</h3>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="main.js"></script>
     </body>
 </html>
