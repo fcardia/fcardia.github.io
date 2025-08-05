@@ -297,7 +297,7 @@ section hr {
     background-color: #ffff99;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     .sidebar {
         width: 100vw;
