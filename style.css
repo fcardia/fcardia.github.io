@@ -20,6 +20,7 @@ body {
     margin: 0;
     height: 100vh;
     scroll-behavior: smooth;
+    width: inherit;
 }
 
 a {
@@ -269,6 +270,44 @@ section hr {
     font-size: 18px;
 }
 
+/* Post */
+
+.post {
+    font-family: sans-serif;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    /* text-align: center; */
+}
+
+header,
+footer {
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.tags {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.tags a {
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: #0066cc;
+}
+
+
 .label {
     padding: 0.2em 0.5em;
     border-radius: 3px;
@@ -300,6 +339,7 @@ section hr {
 @media only screen and (max-width: 768px) {
 
     .sidebar {
+        box-sizing: border-box;
         width: 100vw;
         background-color: var(--primary);
         color: var(--white);
@@ -314,6 +354,8 @@ section hr {
         left: 0;
         z-index: 999;
         flex: 1;
+
+        transition: top 0.3s ease;
     }
 
     .content {
@@ -329,7 +371,6 @@ section hr {
         display: inline;
         height: 3000px; /* fallback if JS not used */
     }
-
 
     .my-picture {
         display: none;
@@ -367,12 +408,13 @@ section hr {
     }
 
     .navbar {
-        width: inherit;
+        width: 80vw;
     }
 
     .navbar ul {
         list-style-type: none;
-        padding: 0;
+        /* width: 70vw; */
+        /* padding: 10px; */
     }
 
     .navbar ul:last-child {
@@ -384,7 +426,6 @@ section hr {
         text-align: center;
         border-radius: 10%;
         margin: 0px;
-        padding: 0px;
         width: inherit;
     }
 
@@ -402,6 +443,7 @@ section hr {
     display: block;
     padding: 10px;
     border-radius: 5px;
+    width: inherit;
     }
 
     .navbar ul li a:hover {
