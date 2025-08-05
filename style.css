@@ -23,8 +23,9 @@ body {
 }
 
 a {
-    all: unset;
+    text-decoration: none;
 }
+
 
 h3 {
     padding-left: 10px;
@@ -233,6 +234,7 @@ section hr {
     margin-top: auto;
     font-weight: normal;
     font-size: 16px;
+    color: var(--black);
 }
 
 /* Publications */
@@ -270,6 +272,7 @@ section hr {
     border-radius: 3px;
     font-size: 0.8rem;
     margin-left: 0.5em;
+    text-align: center; 
 }
 
 .label[data-topic="general"] {
