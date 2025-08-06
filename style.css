@@ -27,7 +27,6 @@ a {
     text-decoration: none;
 }
 
-
 h3 {
     padding-left: 10px;
     padding-bottom: 5px;
@@ -61,14 +60,13 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: sticky;
 }
 
 .content {
-  flex: 1;
-  padding: 2rem;
-  background-color: var(--white);
-  overflow-y: auto;
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--white);
+    overflow-y: auto;
 }
 
 .my-picture {
@@ -292,8 +290,10 @@ footer {
 }
 
 .post-meta {
+    display: flex;
     font-size: 0.9rem;
     color: #555;
+    gap: 1rem;
 }
 
 .tags {
@@ -336,26 +336,15 @@ footer {
     background-color: #ffff99;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
     .sidebar {
-        box-sizing: border-box;
-        width: 100vw;
         background-color: var(--primary);
         color: var(--white);
         padding: 1rem;
-        
-        display: flex;
-        flex-direction: column;             
-        align-items: center;
-
-        position: fixed;                     
+        width: 100%;
+        position: fixed;
         top: 0;
-        left: 0;
-        z-index: 999;
-        flex: 1;
-
-        transition: top 0.3s ease;
     }
 
     .content {
@@ -365,11 +354,6 @@ footer {
         overflow-y: auto;
         padding-top: 280px;
         scroll-padding-top: 280px;
-    }
-
-    .navbar-spacer {
-        display: inline;
-        height: 3000px; /* fallback if JS not used */
     }
 
     .my-picture {
@@ -413,8 +397,6 @@ footer {
 
     .navbar ul {
         list-style-type: none;
-        /* width: 70vw; */
-        /* padding: 10px; */
     }
 
     .navbar ul:last-child {
