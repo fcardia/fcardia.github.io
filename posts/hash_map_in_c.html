@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello world</title>     
+
+        <link rel="stylesheet" href="../style.css" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style>
+            ul {
+                list-style: none;
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            li p {
+                padding: 0;
+                margin: 5px;
+                margin-left: 0;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <aside class="sidebar"></aside>
+
+        <main class="post content">
+            <header>
+                <h1 class="post-title">Hash Map implementation in C</h1>
+                <div class="post-meta">
+                    <time datetime="2025-08-04">August 4, 2025</time> ·
+                    by <span class="author">Francesco Cardia</span> ·
+                    <span class="label" data-topic="computer-science">computer-science</span>
+                </div>
+            </header>
+
+            <article class="article-text">
+                <p>As I usually work with high level stuff, the language I write most of my code is Python, and one of the data structures
+                    that are most useful, flexible and versatile are doubtless the <b>dictionaries</b>.
+                    <br>
+                    A Python dictionary allows to associate values of each type (integers, strings, lists, ...) to a given key
+                    and insert, delete and retrieve them in a constant time of O(1), with some caveat.
+                    This powerfull data structure is nothing else than a <b>hash map</b> or <b>hash table</b> and today I'll propose
+                    an implementation of it in C.
+                    <br>
+                    For the code I drawn inspiration from <a href="https://benhoyt.com/writings/hash-table-in-c/">this article</a> of Ben Hoyt that i tried to adapt and enrich.
+                    <br><br>
+                    Let's get started! First necessary modules are imported and constants are declared.
+                </p>
+                <pre>
+                    <code class="c-code">
+    #include &ltstdio.h>
+    #include &ltstdlib.h>
+    #include &ltstdbool.h>
+    #include &ltstring.h>
+    #include &ltinttypes.h>
+
+    #define FNV_OFFSET 14695981039346656037UL
+    #define FNV_PRIME 1099511628211UL
+
+    #define INITIAL_CAPACITY 2  // must not be zero</code>
+                </pre>      
+                
+                <p>
+                    <ul>
+                        <li><p><code style="font-family: Consolas; font-weight: bold;">stdio.h</code> enables input and output functionalities;</p></li>
+                        <li><p><code style="font-family: Consolas; font-weight: bold;">stdlib.h</code> enables memory manual allocation;</p></li>
+                        <li><p><code style="font-family: Consolas; font-weight: bold;">stdbool.h</code> enables work with booleans;</p></li>
+                        <li><p><code style="font-family: Consolas; font-weight: bold;">string.h</code> enables work with strings;</p></li>
+                        <li><p><code style="font-family: Consolas; font-weight: bold;">inttypes.h</code> enables large integer usage for the hashing function;</p></li>
+                    </ul>
+
+                    <b>FNV_OFFSET</b> and <b>FNV_PRIME</b> will be used in the hash function (more details below).
+                    <br>
+                    <b>INITIAL CAPACITY</b> is the initial number of entries of the hash table.
+                    <br><br>
+                    Now let's define the structures that will be used and the function prototypes
+                </p>
+
+                <pre>
+                    <code class="c-code">
+    typedef struct ht_entry ht_entry;
+    typedef struct hash_table hash_table;
+
+    struct ht_entry{
+        const char* key;
+        void* value;
+    };
+
+    struct hash_table {
+        ht_entry* entries;
+        size_t capacity;
+        size_t length;
+    };
+                    </code>
+                </pre>
+                
+            </article>
+
+            <footer class="tags">
+                Tags:
+                <a href="#">#general</a>
+                <a href="#">#hashmap</a>
+                <a href="#">#c</a>
+                <a href="#">#datastructures</a>
+            </footer>
+        </main>
+
+        <script src="../main.js"></script>
+
+    </body>
+</html>

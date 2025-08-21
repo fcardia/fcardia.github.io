@@ -63,7 +63,7 @@ h5 {
 }
 
 .content {
-    flex: 1;
+    /* flex: 1; */
     padding: 2rem;
     background-color: var(--white);
     overflow-y: auto;
@@ -291,9 +291,8 @@ footer {
 
 .post-meta {
     display: flex;
+    justify-content: space-between;
     font-size: 0.9rem;
-    color: #555;
-    gap: 1rem;
 }
 
 .tags {
@@ -338,13 +337,22 @@ footer {
 
 @media (max-width: 768px) {
 
+    html {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    body {
+        display: inline;
+    }
+
     .sidebar {
+        display: flex;
         background-color: var(--primary);
         color: var(--white);
         padding: 1rem;
         width: 100%;
-        position: fixed;
-        top: 0;
+        align-items: center;
     }
 
     .content {
@@ -352,12 +360,12 @@ footer {
         padding: 2rem;
         background-color: var(--white);
         overflow-y: auto;
-        padding-top: 280px;
         scroll-padding-top: 280px;
+        align-items: center;
     }
 
     .my-picture {
-        display: none;
+        /* display: none; */
         height: 150px;
         width: 150px;
         border-radius: 50%;
@@ -365,34 +373,30 @@ footer {
     }
 
     #name {
-        display: inline;
         font-size: 18px;
         margin-bottom: 5px;
         font-weight: bold;
     }
 
     #role {
-        display: inline;
         margin-top: 5px;
     }
 
     .contacts {
-        display: none;
         list-style-type: none;
-        display: flex;
         padding: 0px;
         margin-bottom: 0;
         gap: 1rem;
     }
 
     .contacts li img {
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
         border-radius: 5px;
     }
 
     .navbar {
-        width: 80vw;
+        width: 100%;
     }
 
     .navbar ul {
@@ -440,10 +444,21 @@ footer {
     }
 
     #mobile-hr {
-        display: inline;
+        display: inherit;
         margin-top: 20px;
         margin-bottom: 10px;
-        width: inherit;
+        width: 100%;
+    }
+
+    .scroll-elements {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* align-items: center; */
+    }
+
+    .project {
+        margin: 10px;
     }
 
 }
