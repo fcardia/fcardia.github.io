@@ -13,6 +13,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
     height: 100vh;
     scroll-behavior: smooth;
     width: inherit;
+    overflow-x: hidden;
 }
 
 a {
